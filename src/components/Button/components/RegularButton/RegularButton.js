@@ -195,7 +195,7 @@ const secondaryStyles = ({ theme, secondary, flat, ...otherProps }) =>
     }
   `;
 
-const sizeStyles = props => {
+const sizeStyles = (props) => {
   const { size: buttonSize } = props;
   if (!buttonSize) {
     return null;
