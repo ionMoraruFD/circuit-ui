@@ -75,12 +75,12 @@ export default class CalendarTagTwoStep extends Component {
     /**
      * Text for the confirm button
      */
-    confirmText: PropTypes.string
+    confirmText: PropTypes.string,
   };
 
   static defaultProps = {
     clearText: 'Clear',
-    confirmText: 'Apply'
+    confirmText: 'Apply',
   };
 
   state = { startDate: null, endDate: null, focusedInput: null };
@@ -100,7 +100,7 @@ export default class CalendarTagTwoStep extends Component {
 
   handleButtonClick = () =>
     this.setState(({ focusedInput }) => ({
-      focusedInput: focusedInput !== null ? null : START_DATE
+      focusedInput: focusedInput !== null ? null : START_DATE,
     }));
 
   getDateRangePreview = () => {

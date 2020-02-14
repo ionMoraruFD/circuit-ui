@@ -43,7 +43,7 @@ class CalendarTag extends Component {
 
   handleButtonClick = () =>
     this.setState(({ focusedInput }) => ({
-      focusedInput: focusedInput !== null ? null : START_DATE
+      focusedInput: focusedInput !== null ? null : START_DATE,
     }));
 
   getDateRangePreview = () => {
@@ -124,7 +124,7 @@ CalendarTag.propTypes = {
   /**
    * Callback to receive the set of dates when the user selects them.
    */
-  onDatesRangeChange: PropTypes.func.isRequired
+  onDatesRangeChange: PropTypes.func.isRequired,
 };
 
 /**

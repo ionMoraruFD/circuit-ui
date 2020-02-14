@@ -27,7 +27,7 @@ import {
   RIGHT,
   START,
   END,
-  CENTER
+  CENTER,
 } from '../../util/constants';
 import { positionPropType, alignPropType } from '../../util/shared-prop-types';
 import { toPopperPlacement, popperModifiers } from './PopoverService';
@@ -56,7 +56,7 @@ const customZIndexWrapperStyles = ({ zIndex }) =>
 
 const PopoverWrapper = styled('div')(
   basePopoverWrapperStyles,
-  customZIndexWrapperStyles
+  customZIndexWrapperStyles,
 );
 
 const arrowUpStyles = css`
@@ -91,14 +91,14 @@ const oppositeDirection = {
   [LEFT]: 'right',
   [RIGHT]: 'left',
   [TOP]: 'down',
-  [BOTTOM]: 'up'
+  [BOTTOM]: 'up',
 };
 
 const arrowStyles = {
   up: arrowUpStyles,
   down: arrowDownStyles,
   left: arrowLeftStyles,
-  right: arrowRightStyles
+  right: arrowRightStyles,
 };
 
 class Popover extends Component {
@@ -154,7 +154,7 @@ class Popover extends Component {
     modifiers: PropTypes.shape(),
     arrowRenderer: PropTypes.func,
     referenceWrapperStyles: PropTypes.func,
-    referenceElement: PropTypes.element
+    referenceElement: PropTypes.element,
   };
 
   static defaultProps = {
@@ -168,7 +168,7 @@ class Popover extends Component {
     arrowRenderer: () => null,
     renderReference: () => null,
     referenceElement: null,
-    referenceWrapperStyles: () => null
+    referenceWrapperStyles: () => null,
   };
 
   buttonRef = null;
@@ -243,7 +243,7 @@ class Popover extends Component {
         {...{
           ...rest,
           // Only pass referenceElement if it's truthy
-          ...(referenceElement && { referenceElement })
+          ...(referenceElement && { referenceElement }),
         }}
         placement={toPopperPlacement(position, align)}
         modifiers={{ ...popperModifiers, ...modifiers }}
@@ -261,7 +261,7 @@ class Popover extends Component {
                 {!!arrowRenderer &&
                   arrowRenderer(
                     arrowStyles[oppositeDirection[position]],
-                    oppositeDirection[position]
+                    oppositeDirection[position],
                   )}
               </div>
             </PopoverWrapper>

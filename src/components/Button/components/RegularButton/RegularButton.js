@@ -134,7 +134,7 @@ const flatStyles = ({ theme, flat, secondary, ...otherProps }) =>
     &:focus {
       border-width: 2px;
       padding: ${calculatePadding({ theme, flat, secondary, ...otherProps })(
-        '2px'
+        '2px',
       )};
     }
   `;
@@ -161,7 +161,7 @@ const secondaryStyles = ({ theme, secondary, flat, ...otherProps }) =>
       border-width: 2px;
       box-shadow: none;
       padding: ${calculatePadding({ theme, flat, secondary, ...otherProps })(
-        '2px'
+        '2px',
       )};
     }
 
@@ -190,7 +190,7 @@ const secondaryStyles = ({ theme, secondary, flat, ...otherProps }) =>
       border-width: 2px;
       box-shadow: none;
       padding: ${calculatePadding({ theme, flat, secondary, ...otherProps })(
-        '2px'
+        '2px',
       )};
     }
   `;
@@ -203,7 +203,7 @@ const sizeStyles = props => {
   const padding = calculatePadding(props)();
   return css({
     label: `button--${buttonSize}`,
-    padding
+    padding,
   });
 };
 

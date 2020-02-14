@@ -93,13 +93,13 @@ Sidebar.propTypes = {
   /**
    * A className to allow custom styles with Emotion's css prop
    */
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 Sidebar.defaultProps = {
   children: '',
   open: false,
-  onClose: null
+  onClose: null,
 };
 
 Sidebar.Header = Header;
